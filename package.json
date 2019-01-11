@@ -1,0 +1,14 @@
+{
+  "name": "cr.brainstation",
+  "version": "1.0.0",
+  "description": "Interactive Resume Webpage of Elías Calderón",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elías Calderón",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.2.1"
+  }
+}
