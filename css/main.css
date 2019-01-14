@@ -1,0 +1,288 @@
+:root {
+  --brand-skyblue: #22A39F;
+  --brand-highlight-skyblue: #3C6E71;
+  --brand-black: #3F3F3F;
+  --brand-dark: #f3efe0;
+  --hair-yellow: #E1B555;
+  --brand-light-yellow: #FFD67A;
+  --brand-gray: #d3cfc3;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Tags */
+
+body {
+  color: var(--brand-black);
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--brand-skyblue);
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+  cursor: default;
+  text-align: center;
+}
+
+hr {
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+}
+
+strong {
+  font-weight: 900;
+}
+
+footer {
+  background-color: var(--brand-black);
+}
+
+/* Classes */
+
+.panel {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.panel--primary {
+  max-height: 1080px;
+  height: 100vh;
+  align-content: center;
+  position: relative;
+}
+
+.panel--light {
+  background: #fff;
+}
+
+.panel--dark {
+  background: var(--brand-dark);
+}
+
+.panel--ucr {
+  background-color: #0bbaef;
+}
+
+.panel--full {
+  max-height: 1080px;
+  height: 100vh;
+}
+
+.separator--yellow {
+  border-top: 1px solid var(--hair-yellow);
+}
+
+.separator--yellow-mt {
+  margin-top: 2.5rem;
+}
+
+.separator--white {
+  border-top: 1px solid white;
+}
+
+.home-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
+  box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
+  width: 45%;
+  background-color: white;
+  padding: 1.5rem 0;
+}
+
+.main-title-wrapper {
+  text-align: center;
+}
+
+.main-title {
+  color: var(--brand-skyblue);
+  font-size: 5rem;
+  border-bottom: 3px solid var(--brand-skyblue);
+  margin: 0 auto 1rem;
+  display: inline-block;
+  animation-delay: 0.5s;
+  cursor: default;
+  font-family: 'Nunito', sans-serif;
+}
+
+.main-subtitle {
+  animation-delay: 1s;
+}
+
+.aboutme-description {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  color: gray;
+}
+
+.profile-pic {
+  display: block;
+  width: 100%;
+}
+
+.ucr-title {
+  color: white;
+}
+
+.ucr-logo {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.ucr-degree-title {
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.experience-card {
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
+  box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
+  width: 270px;
+  height: 100%;
+  margin: auto;
+}
+
+.img-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 270px;
+}
+
+.experience-card-img {
+  display: block;
+  width: 100%;
+}
+
+.experience-card-caption {
+  padding: 0.5rem 1rem 1rem;
+  border-top: 4px solid var(--hair-yellow);
+}
+
+.experience-card-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card-description {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.soft-skill {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.soft-skill-icon-wrapper {
+  padding: 1.5rem 0;
+  width: 9rem;
+  margin: 0.8rem auto 0;
+}
+
+.soft-skill-icon {
+  font-size: 5rem;
+  color: var(--brand-highlight-skyblue);
+}
+
+.soft-skill-title {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.skill-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skill-list li {
+  margin-bottom: 0.3rem;
+}
+
+.progressBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Bootstrap Classes */
+
+.bg-light {
+  background: transparent !important;
+}
+
+.navbar {
+  transition: background-color 0.5s ease;
+}
+
+.container--reduced {
+  width: 60%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    min-width: 900px;
+  }
+}
+
+.nav-link {
+  color: var(--brand-black);
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--brand-highlight-skyblue);
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .active>.nav-link {
+  color: var(--brand-skyblue);
+}
