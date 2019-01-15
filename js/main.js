@@ -1,9 +1,8 @@
-var lowerMidscreen = 0;
-var javaBar, cppBar, csharpBar, pythonBar, cBar, htmlBar, jsBar, cssBar, 
-springBar, hibernateBar, mavenBar, jerseyBar, gitBar, mysqlBar, mssqlBar,
-oracleBar, lambdaBar, apigBar, dynamoBar, cognitoBar, iamBar;
+var javaBar, cppBar, csharpBar, pythonBar, cBar, htmlBar, jsBar, cssBar,
+  springBar, hibernateBar, mavenBar, jerseyBar, gitBar, mysqlBar, mssqlBar,
+  oracleBar, lambdaBar, apigBar, dynamoBar, cognitoBar, iamBar;
 
-function animations() {
+function animateProgressBars() {
   javaBar.animate(0.6);
   cppBar.animate(0.5);
   csharpBar.animate(0.30);
@@ -21,38 +20,13 @@ function animations() {
   mssqlBar.animate(0.30);
   oracleBar.animate(0.30);
   lambdaBar.animate(0.20);
-  apigBar.animate(0.20); 
-  dynamoBar.animate(0.20); 
-  cognitoBar.animate(0.20); 
+  apigBar.animate(0.20);
+  dynamoBar.animate(0.20);
+  cognitoBar.animate(0.20);
   iamBar.animate(0.20);
 }
 
 $(document).ready(function () {
-  $('.nav-link').bind('click', function (e) {
-    e.preventDefault(); // prevent hard jump, the default behavior
-
-    var target = $(this).attr("href"); // Set the target as variable
-
-    // perform animated scrolling by getting top-position of target-element and set it as scroll target
-    $('html, body').stop().animate({
-      scrollTop: $(target).offset().top
-    }, 600, function () {
-      location.hash = target; //attach the hash (#jumptarget) to the pageurl
-    });
-
-    return false;
-  });
-
-  let scrollDistance = $(window).scrollTop();
-  lowerMidscreen = ($('#home').height() + parseInt($('#home').css('padding-top')) * 2) / 3;
-  if (scrollDistance > lowerMidscreen) {
-    $('.navbar').addClass('navbar-dark');
-    $('.navbar').addClass('bg-dark');
-  } else {
-    console.log('nani2');
-    $('.navbar').addClass('navbar-light');
-    $('.navbar').addClass('bg-light');
-  }
 
   let progressBarStyle = {
     color: 'var(--hair-yellow)',
@@ -89,47 +63,158 @@ $(document).ready(function () {
 
 });
 
-$(window).scroll(function () {
-  let scrollDistance = $(window).scrollTop();
+$(window).on('load', function () {
+  $('.nav-link:not(#contact-item)').bind('click', function (e) {
+    e.preventDefault(); // prevent hard jump, the default behavior
 
-  if (scrollDistance > lowerMidscreen) {
-    if ($('.navbar').hasClass('navbar-light')) {
-      $('.navbar').removeClass('navbar-light');
-      $('.navbar').removeClass('bg-light');
-      $('.navbar').addClass('navbar-dark');
-      $('.navbar').addClass('bg-dark');
-    }
-  } else {
-    if ($('.navbar').hasClass('navbar-dark')) {
-      $('.navbar').removeClass('navbar-dark');
-      $('.navbar').removeClass('bg-dark');
+    var target = $(this).attr("href"); // Set the target as variable
+
+    // perform animated scrolling by getting top-position of target-element and set it as scroll target
+    $('html, body').stop().animate({
+      scrollTop: $(target).offset().top
+    }, 600, function () {
+      location.hash = target; //attach the section id to the pageurl
+    });
+
+    return false;
+  });
+
+  $('#contact-item').bind('click', function (e) {
+    e.preventDefault(); // prevent hard jump, the default behavior
+
+    // perform animated scrolling to the bottom of page
+    $('html, body').stop().animate({
+      scrollTop: $(document).height()
+    }, 600);
+
+    return false;
+  });
+
+  $('.home-title').eq(0).addClass('animated fadeIn slow');
+});
+
+function setActiveNavItem(index) {
+  $('.nav-item.active').removeClass('active');
+  $('.nav-item').eq(index).addClass('active');
+}
+
+const HOME_INDEX = 0;
+const ABOUT_INDEX = 1;
+const EDUCATION_INDEX = 2;
+const EXPERIENCE_INDEX = 3;
+const SKILLS_INDEX = 4;
+const PROJECTS_INDEX = 5;
+const CONTACT_INDEX = 6;
+const WAYPOINT_OFFSET = 50;
+
+new Waypoint({
+  element: document.getElementById('about-me'),
+  handler: function (direction) {
+    if (direction === 'up') {
+      $('.navbar.navbar-dark').removeClass('navbar-dark');
+      $('.navbar.bg-dark').removeClass('bg-dark');
       $('.navbar').addClass('navbar-light');
       $('.navbar').addClass('bg-light');
-    }
-  }
 
-  // Assign active class to nav links while scolling
-  $('.panel').each(function (i) {
-    if (($(this).position().top - 100) <= scrollDistance) {
-      $('.nav-item.active').removeClass('active');
-      $('.nav-item').eq(i).addClass('active');
+      setActiveNavItem(HOME_INDEX);
+      pJSDom[0].pJS.particles.move.enable = true;
+      pJSDom[0].pJS.fn.particlesRefresh();
     }
-  });
-}).scroll();
+    else if (direction === 'down') {
+      $('.navbar.navbar-light').removeClass('navbar-light');
+      $('.navbar.bg-light').removeClass('bg-light');
+      $('.navbar').addClass('navbar-dark');
+      $('.navbar').addClass('bg-dark');
 
-/* ---- particles.js config ---- */
+      setActiveNavItem(ABOUT_INDEX);
+      pJSDom[0].pJS.particles.move.enable = false;
+      $('#about-me-left-animated').addClass('animated fadeInLeft slow');
+      $('#about-me-center-animated').addClass('animated fadeIn slow');
+      $('#about-me-right-animated').addClass('animated fadeInRight slow');
+    }
+  },
+  offset: WAYPOINT_OFFSET
+})
+
+new Waypoint({
+  element: document.getElementById('education'),
+  handler: function (direction) {
+    if (direction === 'up') {
+      setActiveNavItem(ABOUT_INDEX);
+    }
+    else if (direction === 'down') {
+      setActiveNavItem(EDUCATION_INDEX);
+      $('#ucr-logo-animated').addClass('animated fadeInUp');
+      $('#ucr-degree-title-animated').addClass('animated fadeInUp');
+    }
+  },
+  offset: WAYPOINT_OFFSET
+})
+
+new Waypoint({
+  element: document.getElementById('experience'),
+  handler: function (direction) {
+    if (direction === 'up') {
+      setActiveNavItem(EDUCATION_INDEX);
+    }
+    else if (direction === 'down') {
+      setActiveNavItem(EXPERIENCE_INDEX);
+      $('#cicanum-card-animated').addClass('animated flipInY');
+      $('#gl-card-animated').addClass('animated flipInY delay-05s');
+      $('#ecci-card-animated').addClass('animated flipInY delay-1s');
+    }
+  },
+  offset: WAYPOINT_OFFSET
+})
+
+new Waypoint({
+  element: document.getElementById('skills'),
+  handler: function (direction) {
+    if (direction === 'up') {
+      setActiveNavItem(EXPERIENCE_INDEX);
+    }
+    else if (direction === 'down') {
+      setActiveNavItem(SKILLS_INDEX);
+      $('.soft-skill-animated').addClass('animated fadeInUp slow');
+    }
+  },
+  offset: WAYPOINT_OFFSET
+})
+
+new Waypoint({
+  element: document.getElementById('technical-skills'),
+  handler: function () {
+    animateProgressBars();
+  },
+  offset: WAYPOINT_OFFSET + 30
+})
+
+new Waypoint({
+  element: document.getElementById('projects'),
+  handler: function (direction) {
+    if (direction === 'up') {
+      setActiveNavItem(SKILLS_INDEX);
+    }
+    else if (direction === 'down') {
+      setActiveNavItem(PROJECTS_INDEX);
+    }
+  },
+  offset: WAYPOINT_OFFSET
+})
+
+/* Particles Configuration */
 
 particlesJS("home", {
   "particles": {
     "number": {
-      "value": 100,
+      "value": 200,
       "density": {
         "enable": true,
         "value_area": 800
       }
     },
     "color": {
-      "value": "#22a39f"
+      "value": "#22A39F"
     },
     "shape": {
       "type": "circle",
@@ -147,7 +232,7 @@ particlesJS("home", {
       }
     },
     "opacity": {
-      "value": 0.5,
+      "value": 0.8,
       "random": true,
       "anim": {
         "enable": false,
@@ -175,8 +260,8 @@ particlesJS("home", {
     },
     "move": {
       "enable": true,
-      "speed": 6,
-      "direction": "bottom",
+      "speed": 2,
+      "direction": "none",
       "random": false,
       "straight": false,
       "out_mode": "out",

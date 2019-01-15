@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/main.css">
 
   <title>Elias Calderon</title>
@@ -47,7 +48,7 @@
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#contact" id="contact-item">Contact</a>
             </li>
           </ul>
         </div>
@@ -59,7 +60,7 @@
   <main>
 
     <section class="panel panel--primary" id="home">
-      <div class="home-title">
+      <div class="home-title transparent">
         <div class="row">
           <div class="col-12 text-center">
             <h1 class="main-title">Elías Calderón</h1>
@@ -83,7 +84,7 @@
             <p class="aboutme-description">A junior developer thirsty for knowledge</p>
             <hr class="separator--yellow">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 transparent" id="about-me-left-animated">
             <h2>Details</h2>
             <p>
               Always looking for opportunities where I can learn new technologies,
@@ -96,10 +97,10 @@
               Guadalupe, Costa Rica
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 transparent" id="about-me-center-animated">
             <img class="profile-pic" src="./img/profile-pic.png" alt="Profile Picture">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 transparent" id="about-me-right-animated">
             <h2>Languages</h2>
             <p>
               <strong>Spanish - </strong>Native<br>
@@ -119,7 +120,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-7 transparent" id="ucr-degree-title-animated">
             <h2 class="ucr-degree-title">Bachelor's Degree in Computer Science at
               University of Costa Rica</h2>
             <p>The education was mainly Java-based programming, but I also learned
@@ -129,7 +130,7 @@
             <p>Now I just have one class left so I can get my title.
             </p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5 transparent" id="ucr-logo-animated">
             <img class="ucr-logo" src="./img/ucr-logo.png" alt="UCR Logo">
           </div>
         </div>
@@ -146,14 +147,14 @@
         </div>
 
         <div class="row">
-          <div class="col-xl-4">
-            <div class="experience-card">
+          <div class="col-xl-4 cv-card-container">
+            <div class="cv-card transparent" id="cicanum-card-animated">
               <div class="img-box">
-                <img class="experience-card-img" src="./img/cicanum-logo.jpg" alt="CICANUM">
+                <img class="cv-card-img" src="./img/cicanum-logo.jpg" alt="CICANUM">
               </div>
-              <div class="experience-card-caption">
-                <p class="experience-card-title">CICANUM</p>
-                <p class="experience-card-description">
+              <div class="cv-card-caption">
+                <p class="cv-card-title">CICANUM</p>
+                <p class="cv-card-description">
                   Developed a new backend in Java 8 for their new service platform. I was also in charge of
                   maintaining and upgrading two legacy web applications.
                 </p>
@@ -161,14 +162,14 @@
             </div>
           </div>
 
-          <div class="col-xl-4">
-            <div class="experience-card">
+          <div class="col-xl-4 cv-card-container">
+            <div class="cv-card transparent" id="gl-card-animated">
               <div class="img-box">
-                <img class="experience-card-img" src="./img/gl-logo.png" alt="Gorilla Logic">
+                <img class="cv-card-img" src="./img/gl-logo.png" alt="Gorilla Logic">
               </div>
-              <div class="experience-card-caption">
-                <p class="experience-card-title">Gorilla Logic</p>
-                <p class="experience-card-description">
+              <div class="cv-card-caption">
+                <p class="cv-card-title">Gorilla Logic</p>
+                <p class="cv-card-description">
                   Developed an application for Territorio de Zaguates using Amazon Web Services.
                   Worked in the backend developed with Java 8 and various AWS techonologies. Also worked a litlle
                   in the iOS application developed in Swift.</p>
@@ -176,12 +177,12 @@
             </div>
           </div>
 
-          <div class="col-xl-4">
-            <div class="experience-card">
-              <img class="experience-card-img" src="./img/ecci-logo.png" alt=" ECCI">
-              <div class="experience-card-caption">
-                <p class="experience-card-title">Teaching Assistant - ECCI UCR</p>
-                <p class="experience-card-description"></p>
+          <div class="col-xl-4 cv-card-container">
+            <div class="cv-card transparent" id="ecci-card-animated">
+              <img class="cv-card-img" src="./img/ecci-logo.png" alt=" ECCI">
+              <div class="cv-card-caption">
+                <p class="cv-card-title">Teaching Assistant - ECCI UCR</p>
+                <p class="cv-card-description"></p>
               </div>
             </div>
           </div>
@@ -204,7 +205,7 @@
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-3 soft-skill-animated transparent">
               <div class="soft-skill">
                 <div class="row">
                   <div class="col-12">
@@ -222,7 +223,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-3 soft-skill-animated transparent">
               <div class="soft-skill">
                 <div class="row">
                   <div class="col-12">
@@ -240,7 +241,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-3 soft-skill-animated transparent">
               <div class="soft-skill">
                 <div class="row">
                   <div class="col-12">
@@ -258,7 +259,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-3 soft-skill-animated transparent">
               <div class="soft-skill">
                 <div class="row">
                   <div class="col-12">
@@ -276,7 +277,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-3 soft-skill-animated transparent">
               <div class="soft-skill">
                 <div class="row">
                   <div class="col-12">
@@ -294,7 +295,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-3 soft-skill-animated transparent">
               <div class="soft-skill">
                 <div class="row">
                   <div class="col-12">
@@ -319,7 +320,7 @@
           <div class="row">
             <div class="col-12">
               <hr class="separator--yellow separator--yellow-mt">
-              <h2>Technical Skills</h2> <button onclick="animations()">Animacion</button>
+              <h2>Technical Skills</h2>
             </div>
           </div>
 
@@ -330,7 +331,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Java 8</p>
+                      <p class="skill">Java 8</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="javaBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -342,7 +343,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">C++</p>
+                      <p class="skill">C++</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="cppBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -354,7 +355,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">C#</p>
+                      <p class="skill">C#</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="csharpBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -366,7 +367,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Javascript</p>
+                      <p class="skill">Javascript</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="jsBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -384,7 +385,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">HTML5</p>
+                      <p class="skill">HTML5</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="htmlBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -396,7 +397,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">CSS</p>
+                      <p class="skill">CSS</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="cssBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -408,7 +409,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Python</p>
+                      <p class="skill">Python</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="pythonBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -420,7 +421,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">C</p>
+                      <p class="skill">C</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="cBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -450,7 +451,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Spring</p>
+                      <p class="skill">Spring</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="springBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -462,7 +463,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Hibernate</p>
+                      <p class="skill">Hibernate</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="hibernateBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -474,7 +475,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Maven</p>
+                      <p class="skill">Maven</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="mavenBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -486,7 +487,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Git</p>
+                      <p class="skill">Git</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="gitBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -498,7 +499,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Jersey</p>
+                      <p class="skill">Jersey</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="jerseyBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -510,7 +511,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">MySQL</p>
+                      <p class="skill">MySQL</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="mysqlBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -522,7 +523,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">MsSQL</p>
+                      <p class="skill">MsSQL</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="mssqlBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -534,7 +535,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Oracle</p>
+                      <p class="skill">Oracle</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="oracleBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -552,7 +553,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">AWS Lambda</p>
+                      <p class="skill">AWS Lambda</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="lambdaBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -564,7 +565,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">API Gateway</p>
+                      <p class="skill">API Gateway</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="apigBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -576,7 +577,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Dynamo DB</p>
+                      <p class="skill">Dynamo DB</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="dynamoBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -588,7 +589,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">Amazon Cognito</p>
+                      <p class="skill">Amazon Cognito</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="cognitoBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -600,7 +601,7 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="technical-skill">IAM</p>
+                      <p class="skill">IAM</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="iamBar"></div>
                     <div class="col-3 pl-0 skill-level">
@@ -628,14 +629,14 @@
         </div>
 
         <div class="row">
-          <div class="col-xl-4">
-            <div class="experience-card">
+          <div class="col-xl-4 cv-card-container">
+            <div class="cv-card">
               <div class="img-box">
-                <img class="experience-card-img" src="./img/cicanum-logo.jpg" alt="CICANUM">
+                <img class="cv-card-img" src="./img/cicanum-logo.jpg" alt="CICANUM">
               </div>
-              <div class="experience-card-caption">
-                <p class="experience-card-title">IoC Container</p>
-                <p class="experience-card-description">
+              <div class="cv-card-caption">
+                <p class="cv-card-title">IoC Container</p>
+                <p class="cv-card-description">
                   Developed a new backend in Java 8 for their new service platform. I was also in charge of
                   maintaining and upgrading two legacy web applications.
                 </p>
@@ -643,14 +644,14 @@
             </div>
           </div>
 
-          <div class="col-xl-4">
-            <div class="experience-card">
+          <div class="col-xl-4 cv-card-container">
+            <div class="cv-card">
               <div class="img-box">
-                <img class="experience-card-img" src="./img/gl-logo.png" alt="Gorilla Logic">
+                <img class="cv-card-img" src="./img/gl-logo.png" alt="Gorilla Logic">
               </div>
-              <div class="experience-card-caption">
-                <p class="experience-card-title">Talent!</p>
-                <p class="experience-card-description">
+              <div class="cv-card-caption">
+                <p class="cv-card-title">Talent!</p>
+                <p class="cv-card-description">
                   Developed an application for Territorio de Zaguates using Amazon Web Services.
                   Worked in the backend developed with Java 8 and various AWS techonologies. Also worked a litlle
                   in the iOS application developed in Swift.</p>
@@ -658,12 +659,12 @@
             </div>
           </div>
 
-          <div class="col-xl-4">
-            <div class="experience-card">
-              <img class="experience-card-img" src="./img/ecci-logo.png" alt=" ECCI">
-              <div class="experience-card-caption">
-                <p class="experience-card-title">Football 5 Management system</p>
-                <p class="experience-card-description"></p>
+          <div class="col-xl-4 cv-card-container">
+            <div class="cv-card">
+              <img class="cv-card-img" src="./img/ecci-logo.png" alt=" ECCI">
+              <div class="cv-card-caption">
+                <p class="cv-card-title">Football 5 Management system</p>
+                <p class="cv-card-description"></p>
               </div>
             </div>
           </div>
@@ -678,7 +679,18 @@
     <div class="container container--reduced">
       <div class="row">
         <div class="col-12">
-          <h1>Contact</h1>
+
+          <ul class="contact-list">
+            <li class="contact-list-item">
+              <a href="#"><i class="fab fa-linkedin"></i> <span class="contact-hide">Linkedin</span></a></li>
+            <li class="contact-list-item">
+              <a href="#"><i class="fab fa-github"></i> <span class="contact-hide">Github</span></a>
+            </li>
+            <li class="contact-list-item">
+              <a href="#"><i class="fas fa-envelope"></i> <span class="contact-hide">Gmail</span></a>
+            </li>
+          </ul>
+
         </div>
       </div>
     </div>
@@ -688,6 +700,7 @@
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="./node_modules/progressbar.js/dist/progressbar.min.js"></script>
   <script src="./node_modules/particles.js/particles.js"></script>
+  <script src="./node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
   <script src="./js/main.js"></script>
 
 </body>

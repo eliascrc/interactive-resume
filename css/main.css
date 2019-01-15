@@ -6,6 +6,7 @@
   --hair-yellow: #E1B555;
   --brand-light-yellow: #FFD67A;
   --brand-gray: #d3cfc3;
+  --ucr-color: #0bbaef;
 }
 
 *, *:before, *:after {
@@ -13,7 +14,6 @@
 }
 
 /* Tags */
-
 body {
   color: var(--brand-black);
   margin: 0;
@@ -62,10 +62,10 @@ strong {
 
 footer {
   background-color: var(--brand-black);
+  padding: 1rem 0;
 }
 
 /* Classes */
-
 .panel {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -76,10 +76,12 @@ footer {
 }
 
 .panel--primary {
-  max-height: 1080px;
+  max-height: 920px;
   height: 100vh;
   align-content: center;
   position: relative;
+  padding-bottom: 0;
+  padding-top: 3rem;
 }
 
 .panel--light {
@@ -91,11 +93,11 @@ footer {
 }
 
 .panel--ucr {
-  background-color: #0bbaef;
+  background-color: var(--ucr-color);
 }
 
 .panel--full {
-  max-height: 1080px;
+  max-height: 920px;
   height: 100vh;
 }
 
@@ -111,17 +113,19 @@ footer {
   border-top: 1px solid white;
 }
 
+.transparent {
+  opacity: 0;
+}
+
 .home-title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
-  -moz-box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
   box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
   width: 45%;
   background-color: white;
-  padding: 1.5rem 0;
+  padding: 2rem;
 }
 
 .main-title-wrapper {
@@ -139,8 +143,28 @@ footer {
   font-family: 'Nunito', sans-serif;
 }
 
-.main-subtitle {
-  animation-delay: 1s;
+@media screen and (max-width: 1280px) {
+  
+  .main-title {
+  font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+  
+  .main-title {
+  font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
 }
 
 .aboutme-description {
@@ -154,6 +178,8 @@ footer {
 .profile-pic {
   display: block;
   width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .ucr-title {
@@ -163,7 +189,7 @@ footer {
 .ucr-logo {
   width: 100%;
   display: block;
-  margin: auto;
+  margin: 1rem auto;
 }
 
 .ucr-degree-title {
@@ -172,9 +198,11 @@ footer {
   font-size: 1.5rem;
 }
 
-.experience-card {
-  -webkit-box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
-  -moz-box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
+.cv-card-container {
+  margin-bottom: 2rem;
+}
+
+.cv-card {
   box-shadow: 0px 0px 22px 0px rgba(115, 115, 115, 0.67);
   width: 270px;
   height: 100%;
@@ -189,23 +217,23 @@ footer {
   height: 270px;
 }
 
-.experience-card-img {
+.cv-card-img {
   display: block;
   width: 100%;
 }
 
-.experience-card-caption {
+.cv-card-caption {
   padding: 0.5rem 1rem 1rem;
   border-top: 4px solid var(--hair-yellow);
 }
 
-.experience-card-title {
+.cv-card-title {
   font-family: 'Nunito', sans-serif;
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
 
-.experience-card-description {
+.cv-card-description {
   font-weight: 400;
   font-size: 0.8rem;
 }
@@ -254,6 +282,40 @@ footer {
   justify-content: center;
 }
 
+.contact-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-list-item a {
+  color: white;
+  font-weight: 300;
+}
+
+.contact-list-item {
+  text-align: center;
+}
+
+.contact-list-item a:hover {
+  text-decoration: none;
+  color: var(--brand-highlight-skyblue);
+}
+
+.contact-list-item:not(:first-child)::before {
+  content: "|";
+  color: white;
+  margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .contact-hide {
+    display: none;
+  }
+}
+
 /* Bootstrap Classes */
 
 .bg-light {
@@ -285,4 +347,12 @@ footer {
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .active>.nav-link {
   color: var(--brand-skyblue);
+}
+
+.animated {
+  opacity: 1;
+}
+
+.delay-05s {
+  animation-delay: 0.5s;
 }
