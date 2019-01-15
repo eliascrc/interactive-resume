@@ -1,13 +1,13 @@
 /* Constants */
-const HOME_INDEX = 0;
-const ABOUT_INDEX = 1;
-const EDUCATION_INDEX = 2;
-const EXPERIENCE_INDEX = 3;
-const SKILLS_INDEX = 4;
-const PROJECTS_INDEX = 5;
-const CONTACT_INDEX = 6;
-const WAYPOINT_OFFSET = 50;
-const WAYPOINT_OFFSET_SUBSECTION = 80;
+var HOME_INDEX = 0;
+var ABOUT_INDEX = 1;
+var EDUCATION_INDEX = 2;
+var EXPERIENCE_INDEX = 3;
+var SKILLS_INDEX = 4;
+var PROJECTS_INDEX = 5;
+var CONTACT_INDEX = 6;
+var WAYPOINT_OFFSET = 50;
+var WAYPOINT_OFFSET_SUBSECTION = 80;
 
 /* Variables */
 var basicProgressBar = [];
