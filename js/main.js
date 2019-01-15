@@ -1,34 +1,31 @@
-var javaBar, cppBar, csharpBar, pythonBar, cBar, htmlBar, jsBar, cssBar,
-  springBar, hibernateBar, mavenBar, jerseyBar, gitBar, mysqlBar, mssqlBar,
-  oracleBar, lambdaBar, apigBar, dynamoBar, cognitoBar, iamBar;
+/* Constants */
+const HOME_INDEX = 0;
+const ABOUT_INDEX = 1;
+const EDUCATION_INDEX = 2;
+const EXPERIENCE_INDEX = 3;
+const SKILLS_INDEX = 4;
+const PROJECTS_INDEX = 5;
+const CONTACT_INDEX = 6;
+const WAYPOINT_OFFSET = 50;
+const WAYPOINT_OFFSET_SUBSECTION = 80;
+
+/* Variables */
+var basicProgressBar = [];
+var intermediateProgressBar = [];
 
 function animateProgressBars() {
-  javaBar.animate(0.6);
-  cppBar.animate(0.5);
-  csharpBar.animate(0.30);
-  pythonBar.animate(0.20);
-  cBar.animate(0.20);
-  htmlBar.animate(0.30);
-  jsBar.animate(0.30);
-  cssBar.animate(0.30);
-  springBar.animate(0.50);
-  hibernateBar.animate(0.50);
-  mavenBar.animate(0.50);
-  gitBar.animate(0.50);
-  jerseyBar.animate(0.20);
-  mysqlBar.animate(0.50);
-  mssqlBar.animate(0.30);
-  oracleBar.animate(0.30);
-  lambdaBar.animate(0.20);
-  apigBar.animate(0.20);
-  dynamoBar.animate(0.20);
-  cognitoBar.animate(0.20);
-  iamBar.animate(0.20);
+  basicProgressBar.forEach(element => {
+    element.animate(0.25);
+  });
+
+  intermediateProgressBar.forEach(element => {
+    element.animate(0.5);
+  });
 }
 
 $(document).ready(function () {
 
-  let progressBarStyle = {
+  const progressBarStyle = {
     color: 'var(--hair-yellow)',
     trailColor: 'var(--brand-gray)',
     duration: 2000,
@@ -39,27 +36,18 @@ $(document).ready(function () {
     }
   };
 
-  javaBar = new ProgressBar.Line('#javaBar', progressBarStyle);
-  cppBar = new ProgressBar.Line('#cppBar', progressBarStyle);
-  csharpBar = new ProgressBar.Line('#csharpBar', progressBarStyle);
-  pythonBar = new ProgressBar.Line('#pythonBar', progressBarStyle);
-  cBar = new ProgressBar.Line('#cBar', progressBarStyle);
-  htmlBar = new ProgressBar.Line('#htmlBar', progressBarStyle);
-  jsBar = new ProgressBar.Line('#jsBar', progressBarStyle);
-  cssBar = new ProgressBar.Line('#cssBar', progressBarStyle);
-  springBar = new ProgressBar.Line('#springBar', progressBarStyle);
-  hibernateBar = new ProgressBar.Line('#hibernateBar', progressBarStyle);
-  mavenBar = new ProgressBar.Line('#mavenBar', progressBarStyle);
-  jerseyBar = new ProgressBar.Line('#jerseyBar', progressBarStyle);
-  gitBar = new ProgressBar.Line('#gitBar', progressBarStyle);
-  mysqlBar = new ProgressBar.Line('#mysqlBar', progressBarStyle);
-  mssqlBar = new ProgressBar.Line('#mssqlBar', progressBarStyle);
-  oracleBar = new ProgressBar.Line('#oracleBar', progressBarStyle);
-  lambdaBar = new ProgressBar.Line('#lambdaBar', progressBarStyle);
-  apigBar = new ProgressBar.Line('#apigBar', progressBarStyle);
-  dynamoBar = new ProgressBar.Line('#dynamoBar', progressBarStyle);
-  cognitoBar = new ProgressBar.Line('#cognitoBar', progressBarStyle);
-  iamBar = new ProgressBar.Line('#iamBar', progressBarStyle);
+  const intermediateSkillNames = ['#javaBar', '#cppBar', '#springBar', '#hibernateBar', '#mavenBar', '#gitBar', '#sqlBar'];
+  const basicSkillNames = ['#csharpBar', '#pythonBar', '#cBar', '#htmlBar', '#jsBar', '#cssBar', '#jerseyBar', '#lambdaBar',
+  '#apigBar', '#dynamoBar', '#cognitoBar', '#iamBar'];
+
+
+  intermediateSkillNames.forEach(name => {
+    intermediateProgressBar.push(new ProgressBar.Line(name, progressBarStyle));
+  }); 
+
+  basicSkillNames.forEach(name => {
+    basicProgressBar.push(new ProgressBar.Line(name, progressBarStyle));
+  });
 
 });
 
@@ -97,15 +85,6 @@ function setActiveNavItem(index) {
   $('.nav-item.active').removeClass('active');
   $('.nav-item').eq(index).addClass('active');
 }
-
-const HOME_INDEX = 0;
-const ABOUT_INDEX = 1;
-const EDUCATION_INDEX = 2;
-const EXPERIENCE_INDEX = 3;
-const SKILLS_INDEX = 4;
-const PROJECTS_INDEX = 5;
-const CONTACT_INDEX = 6;
-const WAYPOINT_OFFSET = 50;
 
 new Waypoint({
   element: document.getElementById('about-me'),
@@ -186,7 +165,7 @@ new Waypoint({
   handler: function () {
     animateProgressBars();
   },
-  offset: WAYPOINT_OFFSET + 30
+  offset: WAYPOINT_OFFSET_SUBSECTION
 })
 
 new Waypoint({
@@ -197,6 +176,9 @@ new Waypoint({
     }
     else if (direction === 'down') {
       setActiveNavItem(PROJECTS_INDEX);
+      $('#spring-card-animated').addClass('animated flipInY');
+      $('#talent-card-animated').addClass('animated flipInY delay-05s');
+      $('#csharp-card-animated').addClass('animated flipInY delay-1s');
     }
   },
   offset: WAYPOINT_OFFSET
