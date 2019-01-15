@@ -4,18 +4,22 @@
   "description": "Interactive Resume Webpage of Elías Calderón",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css": "gulp css",
+    "js": "gulp js"
   },
   "author": "Elías Calderón",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "bootstrap": "^4.2.1",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-js-minify": "0.0.3",
+    "http-server": "^0.11.1",
     "jquery": "^3.3.1",
     "particles.js": "^2.0.0",
     "progressbar.js": "^1.0.1",
     "waypoints": "^4.0.1"
-  },
-  "devDependencies": {
-    "http-server": "^0.11.1"
   }
 }
