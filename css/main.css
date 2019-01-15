@@ -1,3 +1,4 @@
+/* Variable definition */
 :root {
   --brand-skyblue: #22A39F;
   --brand-highlight-skyblue: #3C6E71;
@@ -9,11 +10,12 @@
   --ucr-color: #0bbaef;
 }
 
+/* Border box sizing */
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
-/* Tags */
+/* Tag Styles */
 body {
   color: var(--brand-black);
   margin: 0;
@@ -65,7 +67,7 @@ footer {
   padding: 1rem 0;
 }
 
-/* Classes */
+/* General Classes */
 .panel {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -117,6 +119,7 @@ footer {
   opacity: 0;
 }
 
+/* Classes */
 .home-title {
   position: absolute;
   top: 50%;
@@ -141,30 +144,6 @@ footer {
   animation-delay: 0.5s;
   cursor: default;
   font-family: 'Nunito', sans-serif;
-}
-
-@media screen and (max-width: 1280px) {
-  
-  .main-title {
-  font-size: 3rem;
-  }
-
-  h4 {
-    font-size: 1.5rem;
-  }
-
-}
-
-@media screen and (max-width: 1280px) {
-  
-  .main-title {
-  font-size: 2rem;
-  }
-
-  h4 {
-    font-size: 1rem;
-  }
-
 }
 
 .aboutme-description {
@@ -310,14 +289,37 @@ footer {
   margin: 0 0.5rem;
 }
 
+/* Media Queries */
+@media screen and (max-width: 1280px) {
+  
+  .main-title {
+  font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+  
+  .main-title {
+  font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .contact-hide {
     display: none;
   }
 }
 
-/* Bootstrap Classes */
-
+/* Bootstrap Overrides */
 .bg-light {
   background: transparent !important;
 }
@@ -349,6 +351,7 @@ footer {
   color: var(--brand-skyblue);
 }
 
+/* Animate.css Overrides */
 .animated {
   opacity: 1;
 }

@@ -5,9 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Import Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans:300,400" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
+
+  <!-- CSS Imports -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/main.css">
@@ -22,11 +26,13 @@
       <div class="container">
         <a class="navbar-brand" href="#"></a>
 
+        <!-- Navbar toggler for Responsive -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-nav-ig" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Collapsable navbar items -->
         <div class="collapse navbar-collapse" id="bs-nav-ig">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -51,14 +57,15 @@
               <a class="nav-link" href="#contact" id="contact-item">Contact</a>
             </li>
           </ul>
-        </div>
-      </div>
+        </div> <!-- Container -->
+      </div> <!-- Navbar -->
 
     </nav>
   </header>
 
   <main>
 
+    <!-- Home Hero -->
     <section class="panel panel--primary" id="home">
       <div class="home-title transparent">
         <div class="row">
@@ -74,6 +81,7 @@
       </div>
     </section>
 
+    <!-- About Me Section -->
     <section class="panel panel--light" id="about-me">
       <div class="container container--reduced">
         <div class="row">
@@ -107,10 +115,11 @@
               <strong>English - </strong>Work Sufficient
             </p>
           </div>
-        </div>
-      </div>
+        </div> <!-- Row -->
+      </div> <!-- Container -->
     </section>
 
+    <!-- Education Section -->
     <section class="panel panel--ucr" id="education">
       <div class="container container--reduced">
         <div class="row">
@@ -133,10 +142,12 @@
           <div class="col-md-5 transparent" id="ucr-logo-animated">
             <img class="ucr-logo" src="./img/ucr-logo.png" alt="UCR Logo">
           </div>
-        </div>
-      </div>
+          
+        </div> <!-- Row -->
+      </div> <!-- Container -->
     </section>
 
+    <!-- Experience Section -->
     <section class="panel panel--light" id="experience">
       <div class="container container--reduced">
         <div class="row">
@@ -150,7 +161,7 @@
           <div class="col-xl-4 cv-card-container">
             <div class="cv-card transparent" id="cicanum-card-animated">
               <div class="img-box">
-                <img class="cv-card-img" src="./img/cicanum-logo.jpg" alt="CICANUM">
+                <img class="cv-card-img" src="./img/cicanum-logo.jpg" alt="CICANUM Logo">
               </div>
               <div class="cv-card-caption">
                 <p class="cv-card-title">CICANUM</p>
@@ -165,7 +176,7 @@
           <div class="col-xl-4 cv-card-container">
             <div class="cv-card transparent" id="gl-card-animated">
               <div class="img-box">
-                <img class="cv-card-img" src="./img/gl-logo.png" alt="Gorilla Logic">
+                <img class="cv-card-img" src="./img/gl-logo.png" alt="Gorilla Logic Logo">
               </div>
               <div class="cv-card-caption">
                 <p class="cv-card-title">Gorilla Logic</p>
@@ -179,17 +190,22 @@
 
           <div class="col-xl-4 cv-card-container">
             <div class="cv-card transparent" id="ecci-card-animated">
-              <img class="cv-card-img" src="./img/ecci-logo.png" alt=" ECCI">
+              <img class="cv-card-img" src="./img/ecci-logo.png" alt=" ECCI Logo">
               <div class="cv-card-caption">
                 <p class="cv-card-title">Teaching Assistant - ECCI UCR</p>
-                <p class="cv-card-description"></p>
+                <p class="cv-card-description">
+                  Assistant for Computer Principles for Engineering, Databases 2, Data Structures and algorithms 
+                  classes.
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+
+        </div> <!-- Row -->
+      </div> <!-- Container -->
     </section>
 
+    <!-- Skills Section -->
     <section class="panel panel--dark" id="skills">
       <div class="container container--reduced">
         <div class="row">
@@ -197,6 +213,8 @@
             <h1>Skills</h1>
           </div>
         </div>
+
+        <!-- Soft Skills Subsection -->
         <section id="soft-skills">
           <div class="row">
             <div class="col-12">
@@ -313,7 +331,7 @@
               </div>
             </div>
 
-          </div>
+          </div> <!-- Row -->
         </section>
 
         <section id="technical-skills">
@@ -335,7 +353,7 @@
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="javaBar"></div>
                     <div class="col-3 pl-0 skill-level">
-                      <p><i>Sufficient</i></p>
+                      <p><i>Intermediate</i></p>
                     </div>
                   </div>
                 </li>
@@ -347,7 +365,7 @@
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="cppBar"></div>
                     <div class="col-3 pl-0 skill-level">
-                      <p><i>Sufficient</i></p>
+                      <p><i>Intermediate</i></p>
                     </div>
                   </div>
                 </li>
@@ -375,9 +393,21 @@
                     </div>
                   </div>
                 </li>
+
+                <li>
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <p class="skill">SQL</p>
+                    </div>
+                    <div class="col-9 col-lg-6 progressBar" id="sqlBar"></div>
+                    <div class="col-3 pl-0 skill-level">
+                      <p><i>Intermediate</i></p>
+                    </div>
+                  </div>
+                </li>
               </ul>
 
-            </div>
+            </div> <!-- Column -->
 
             <div class="col-lg-6">
 
@@ -432,10 +462,11 @@
 
               </ul>
 
-            </div>
-          </div>
+            </div> <!-- Column -->
+          </div> <!-- Row -->
         </section>
 
+        <!-- Technology & Frameworks Subsection -->
         <section id="tech&frameworks">
           <div class="row">
             <div class="col-12">
@@ -455,7 +486,7 @@
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="springBar"></div>
                     <div class="col-3 pl-0 skill-level">
-                      <p><i>Sufficient</i></p>
+                      <p><i>Intermediate</i></p>
                     </div>
                   </div>
                 </li>
@@ -467,7 +498,7 @@
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="hibernateBar"></div>
                     <div class="col-3 pl-0 skill-level">
-                      <p><i>Sufficient</i></p>
+                      <p><i>Intermediate</i></p>
                     </div>
                   </div>
                 </li>
@@ -479,7 +510,7 @@
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="mavenBar"></div>
                     <div class="col-3 pl-0 skill-level">
-                      <p><i>Sufficient</i></p>
+                      <p><i>Intermediate</i></p>
                     </div>
                   </div>
                 </li>
@@ -491,7 +522,7 @@
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="gitBar"></div>
                     <div class="col-3 pl-0 skill-level">
-                      <p><i>Sufficient</i></p>
+                      <p><i>Intermediate</i></p>
                     </div>
                   </div>
                 </li>
@@ -511,48 +542,6 @@
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
-                      <p class="skill">MySQL</p>
-                    </div>
-                    <div class="col-9 col-lg-6 progressBar" id="mysqlBar"></div>
-                    <div class="col-3 pl-0 skill-level">
-                      <p><i>Sufficient</i></p>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <p class="skill">MsSQL</p>
-                    </div>
-                    <div class="col-9 col-lg-6 progressBar" id="mssqlBar"></div>
-                    <div class="col-3 pl-0 skill-level">
-                      <p><i>Basic</i></p>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <p class="skill">Oracle</p>
-                    </div>
-                    <div class="col-9 col-lg-6 progressBar" id="oracleBar"></div>
-                    <div class="col-3 pl-0 skill-level">
-                      <p><i>Basic</i></p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <ul class="skill-list">
-                <li>
-                  <div class="row">
-                    <div class="col-lg-3">
                       <p class="skill">AWS Lambda</p>
                     </div>
                     <div class="col-9 col-lg-6 progressBar" id="lambdaBar"></div>
@@ -561,7 +550,13 @@
                     </div>
                   </div>
                 </li>
+              </ul>
 
+            </div> <!-- Column -->
+
+            <div class="col-lg-6">
+
+              <ul class="skill-list">
                 <li>
                   <div class="row">
                     <div class="col-lg-3">
@@ -612,13 +607,14 @@
 
               </ul>
 
-            </div>
-          </div>
+            </div> <!-- Column -->
+          </div> <!-- Row -->
         </section>
 
-      </div>
+      </div> <!-- Container -->
     </section>
 
+    <!-- Projects Section -->
     <section class="panel panel--light" id="projects">
       <div class="container container--reduced">
         <div class="row">
@@ -630,47 +626,49 @@
 
         <div class="row">
           <div class="col-xl-4 cv-card-container">
-            <div class="cv-card">
+            <div class="cv-card transparent" id="spring-card-animated">
               <div class="img-box">
-                <img class="cv-card-img" src="./img/cicanum-logo.jpg" alt="CICANUM">
+                <img class="cv-card-img" src="./img/spring-logo.png" alt="Spring Logo">
               </div>
               <div class="cv-card-caption">
                 <p class="cv-card-title">IoC Container</p>
                 <p class="cv-card-description">
-                  Developed a new backend in Java 8 for their new service platform. I was also in charge of
-                  maintaining and upgrading two legacy web applications.
+                  A basic framework of an Inversion of Control container in Java 8 inspired in Spring Framework. 
                 </p>
               </div>
             </div>
           </div>
 
           <div class="col-xl-4 cv-card-container">
-            <div class="cv-card">
+            <div class="cv-card transparent" id="talent-card-animated">
               <div class="img-box">
-                <img class="cv-card-img" src="./img/gl-logo.png" alt="Gorilla Logic">
+                <img class="cv-card-img" src="./img/talent-logo.png" alt="Talent Logo">
               </div>
               <div class="cv-card-caption">
                 <p class="cv-card-title">Talent!</p>
                 <p class="cv-card-description">
-                  Developed an application for Territorio de Zaguates using Amazon Web Services.
-                  Worked in the backend developed with Java 8 and various AWS techonologies. Also worked a litlle
-                  in the iOS application developed in Swift.</p>
+                  Developing a talent management application for Software Development companies. Worked as a
+                  Backend, Frontend and Android developer alternating my role within the sprints. Also worked as
+                  QA when needed.</p>
               </div>
             </div>
           </div>
 
           <div class="col-xl-4 cv-card-container">
-            <div class="cv-card">
-              <img class="cv-card-img" src="./img/ecci-logo.png" alt=" ECCI">
+            <div class="cv-card transparent" id="csharp-card-animated">
+              <img class="cv-card-img" src="./img/c-sharp-logo.svg" alt="C# Logo">
               <div class="cv-card-caption">
                 <p class="cv-card-title">Football 5 Management system</p>
-                <p class="cv-card-description"></p>
+                <p class="cv-card-description">
+                  A desktop application for subscription, scheduling and accountability management for Football 5
+                  fields developed in .NET, C# and Microsoft SQL Server.
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      </div>
+
+        </div> <!-- Row -->
+      </div> <!-- Container -->
     </section>
 
   </main>
@@ -682,12 +680,12 @@
 
           <ul class="contact-list">
             <li class="contact-list-item">
-              <a href="#"><i class="fab fa-linkedin"></i> <span class="contact-hide">Linkedin</span></a></li>
+              <a href="https://linkedin.com/in/elias-calderon/"><i class="fab fa-linkedin"></i> <span class="contact-hide">Linkedin</span></a></li>
             <li class="contact-list-item">
-              <a href="#"><i class="fab fa-github"></i> <span class="contact-hide">Github</span></a>
+              <a href="https://github.com/eliascrc"><i class="fab fa-github"></i> <span class="contact-hide">Github</span></a>
             </li>
             <li class="contact-list-item">
-              <a href="#"><i class="fas fa-envelope"></i> <span class="contact-hide">Gmail</span></a>
+              <a href="mailto:eliasrc1998@gmail.com"><i class="fas fa-envelope"></i> <span class="contact-hide">Gmail</span></a>
             </li>
           </ul>
 
@@ -696,6 +694,7 @@
     </div>
   </footer>
 
+  <!-- Script Imports -->
   <script src="./js/jquery.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/progressbar.min.js"></script>
