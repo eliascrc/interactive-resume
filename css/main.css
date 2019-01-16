@@ -99,8 +99,7 @@ footer {
 }
 
 .panel--full {
-  max-height: 920px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .separator--yellow {
