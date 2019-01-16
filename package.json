@@ -5,21 +5,29 @@
   "main": "index.js",
   "scripts": {
     "css": "gulp css",
-    "js": "gulp js"
+    "js": "gulp js",
+    "bundle": "webpack --mode production"
   },
   "author": "Elías Calderón",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.2.1",
+    "css-loader": "^2.1.0",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-js-minify": "0.0.3",
     "http-server": "^0.11.1",
     "jquery": "^3.3.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "particles.js": "^2.0.0",
+    "popper.js": "^1.14.6",
     "progressbar.js": "^1.0.1",
-    "waypoints": "^4.0.1"
+    "terser-webpack-plugin": "^1.2.1",
+    "waypoints": "^4.0.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
   }
 }
