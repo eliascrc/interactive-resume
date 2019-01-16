@@ -14,42 +14,19 @@ var basicProgressBar = [];
 var intermediateProgressBar = [];
 
 function animateProgressBars() {
-  basicProgressBar.forEach(element => {
+  basicProgressBar.forEach(function (element) {
     element.animate(0.25);
   });
 
-  intermediateProgressBar.forEach(element => {
+  intermediateProgressBar.forEach(function (element) {
     element.animate(0.5);
   });
 }
 
-$(document).ready(function () {
-
-  const progressBarStyle = {
-    color: 'var(--hair-yellow)',
-    trailColor: 'var(--brand-gray)',
-    duration: 2000,
-    easing: 'easeInOut',
-    strokeWidth: 8,
-    svgStyle: {
-      'border-radius': '0.3rem'
-    }
-  };
-
-  const intermediateSkillNames = ['#javaBar', '#cppBar', '#springBar', '#hibernateBar', '#mavenBar', '#gitBar', '#sqlBar'];
-  const basicSkillNames = ['#csharpBar', '#pythonBar', '#cBar', '#htmlBar', '#jsBar', '#cssBar', '#jerseyBar', '#lambdaBar',
-  '#apigBar', '#dynamoBar', '#cognitoBar', '#iamBar'];
-
-
-  intermediateSkillNames.forEach(name => {
-    intermediateProgressBar.push(new ProgressBar.Line(name, progressBarStyle));
-  }); 
-
-  basicSkillNames.forEach(name => {
-    basicProgressBar.push(new ProgressBar.Line(name, progressBarStyle));
-  });
-
-});
+function setActiveNavItem(index) {
+  $('.nav-item.active').removeClass('active');
+  $('.nav-item').eq(index).addClass('active');
+}
 
 $(window).on('load', function () {
   $('.nav-link:not(#contact-item)').bind('click', function (e) {
@@ -81,108 +58,129 @@ $(window).on('load', function () {
   $('.home-title').eq(0).addClass('animated fadeIn slow');
 });
 
-function setActiveNavItem(index) {
-  $('.nav-item.active').removeClass('active');
-  $('.nav-item').eq(index).addClass('active');
-}
+$(document).ready(function () {
 
-new Waypoint({
-  element: document.getElementById('about-me'),
-  handler: function (direction) {
-    if (direction === 'up') {
-      $('.navbar.navbar-dark').removeClass('navbar-dark');
-      $('.navbar.bg-dark').removeClass('bg-dark');
-      $('.navbar').addClass('navbar-light');
-      $('.navbar').addClass('bg-light');
+  const progressBarStyle = {
+    color: 'var(--hair-yellow)',
+    trailColor: 'var(--brand-gray)',
+    duration: 2000,
+    easing: 'easeInOut',
+    strokeWidth: 8,
+    svgStyle: {
+      'border-radius': '0.3rem'
+    }
+  };
 
-      setActiveNavItem(HOME_INDEX);
-      pJSDom[0].pJS.particles.move.enable = true;
-      pJSDom[0].pJS.fn.particlesRefresh();
-    }
-    else if (direction === 'down') {
-      $('.navbar.navbar-light').removeClass('navbar-light');
-      $('.navbar.bg-light').removeClass('bg-light');
-      $('.navbar').addClass('navbar-dark');
-      $('.navbar').addClass('bg-dark');
+  const intermediateSkillNames = ['#javaBar', '#cppBar', '#springBar', '#hibernateBar', '#mavenBar', '#gitBar', '#sqlBar'];
+  const basicSkillNames = ['#csharpBar', '#pythonBar', '#cBar', '#htmlBar', '#jsBar', '#cssBar', '#jerseyBar', '#lambdaBar',
+  '#apigBar', '#dynamoBar', '#cognitoBar', '#iamBar'];
 
-      setActiveNavItem(ABOUT_INDEX);
-      pJSDom[0].pJS.particles.move.enable = false;
-      $('#about-me-left-animated').addClass('animated fadeInLeft slow');
-      $('#about-me-center-animated').addClass('animated fadeIn slow');
-      $('#about-me-right-animated').addClass('animated fadeInRight slow');
-    }
-  },
-  offset: WAYPOINT_OFFSET
-})
 
-new Waypoint({
-  element: document.getElementById('education'),
-  handler: function (direction) {
-    if (direction === 'up') {
-      setActiveNavItem(ABOUT_INDEX);
-    }
-    else if (direction === 'down') {
-      setActiveNavItem(EDUCATION_INDEX);
-      $('#ucr-logo-animated').addClass('animated fadeInUp');
-      $('#ucr-degree-title-animated').addClass('animated fadeInUp');
-    }
-  },
-  offset: WAYPOINT_OFFSET
-})
+  intermediateSkillNames.forEach( function(name) {
+    intermediateProgressBar.push(new ProgressBar.Line(name, progressBarStyle));
+  }); 
 
-new Waypoint({
-  element: document.getElementById('experience'),
-  handler: function (direction) {
-    if (direction === 'up') {
-      setActiveNavItem(EDUCATION_INDEX);
-    }
-    else if (direction === 'down') {
-      setActiveNavItem(EXPERIENCE_INDEX);
-      $('#cicanum-card-animated').addClass('animated flipInY');
-      $('#gl-card-animated').addClass('animated flipInY delay-05s');
-      $('#ecci-card-animated').addClass('animated flipInY delay-1s');
-    }
-  },
-  offset: WAYPOINT_OFFSET
-})
+  basicSkillNames.forEach( function(name) {
+    basicProgressBar.push(new ProgressBar.Line(name, progressBarStyle));
+  });
 
-new Waypoint({
-  element: document.getElementById('skills'),
-  handler: function (direction) {
-    if (direction === 'up') {
-      setActiveNavItem(EXPERIENCE_INDEX);
-    }
-    else if (direction === 'down') {
-      setActiveNavItem(SKILLS_INDEX);
-      $('.soft-skill-animated').addClass('animated fadeInUp slow');
-    }
-  },
-  offset: WAYPOINT_OFFSET
-})
-
-new Waypoint({
-  element: document.getElementById('technical-skills'),
-  handler: function () {
-    animateProgressBars();
-  },
-  offset: WAYPOINT_OFFSET_SUBSECTION
-})
-
-new Waypoint({
-  element: document.getElementById('projects'),
-  handler: function (direction) {
-    if (direction === 'up') {
-      setActiveNavItem(SKILLS_INDEX);
-    }
-    else if (direction === 'down') {
-      setActiveNavItem(PROJECTS_INDEX);
-      $('#spring-card-animated').addClass('animated flipInY');
-      $('#talent-card-animated').addClass('animated flipInY delay-05s');
-      $('#csharp-card-animated').addClass('animated flipInY delay-1s');
-    }
-  },
-  offset: WAYPOINT_OFFSET
-})
+  new Waypoint({
+    element: document.getElementById('about-me'),
+    handler: function (direction) {
+      if (direction === 'up') {
+        $('.navbar.navbar-dark').removeClass('navbar-dark');
+        $('.navbar.bg-dark').removeClass('bg-dark');
+        $('.navbar').addClass('navbar-light');
+        $('.navbar').addClass('bg-light');
+  
+        setActiveNavItem(HOME_INDEX);
+        pJSDom[0].pJS.particles.move.enable = true;
+        pJSDom[0].pJS.fn.particlesRefresh();
+      }
+      else if (direction === 'down') {
+        $('.navbar.navbar-light').removeClass('navbar-light');
+        $('.navbar.bg-light').removeClass('bg-light');
+        $('.navbar').addClass('navbar-dark');
+        $('.navbar').addClass('bg-dark');
+  
+        setActiveNavItem(ABOUT_INDEX);
+        pJSDom[0].pJS.particles.move.enable = false;
+        $('#about-me-left-animated').addClass('animated fadeInLeft slow');
+        $('#about-me-center-animated').addClass('animated fadeIn slow');
+        $('#about-me-right-animated').addClass('animated fadeInRight slow');
+      }
+    },
+    offset: WAYPOINT_OFFSET
+  });
+  
+  new Waypoint({
+    element: document.getElementById('education'),
+    handler: function (direction) {
+      if (direction === 'up') {
+        setActiveNavItem(ABOUT_INDEX);
+      }
+      else if (direction === 'down') {
+        setActiveNavItem(EDUCATION_INDEX);
+        $('#ucr-logo-animated').addClass('animated fadeInUp');
+        $('#ucr-degree-title-animated').addClass('animated fadeInUp');
+      }
+    },
+    offset: WAYPOINT_OFFSET
+  });
+  
+  new Waypoint({
+    element: document.getElementById('experience'),
+    handler: function (direction) {
+      if (direction === 'up') {
+        setActiveNavItem(EDUCATION_INDEX);
+      }
+      else if (direction === 'down') {
+        setActiveNavItem(EXPERIENCE_INDEX);
+        $('#cicanum-card-animated').addClass('animated flipInY');
+        $('#gl-card-animated').addClass('animated flipInY delay-05s');
+        $('#ecci-card-animated').addClass('animated flipInY delay-1s');
+      }
+    },
+    offset: WAYPOINT_OFFSET
+  });
+  
+  new Waypoint({
+    element: document.getElementById('skills'),
+    handler: function (direction) {
+      if (direction === 'up') {
+        setActiveNavItem(EXPERIENCE_INDEX);
+      }
+      else if (direction === 'down') {
+        setActiveNavItem(SKILLS_INDEX);
+        $('.soft-skill-animated').addClass('animated fadeInUp slow');
+      }
+    },
+    offset: WAYPOINT_OFFSET
+  });
+  
+  new Waypoint({
+    element: document.getElementById('technical-skills'),
+    handler: function () {
+      animateProgressBars();
+    },
+    offset: WAYPOINT_OFFSET_SUBSECTION
+  });
+  
+  new Waypoint({
+    element: document.getElementById('projects'),
+    handler: function (direction) {
+      if (direction === 'up') {
+        setActiveNavItem(SKILLS_INDEX);
+      }
+      else if (direction === 'down') {
+        setActiveNavItem(PROJECTS_INDEX);
+        $('#spring-card-animated').addClass('animated flipInY');
+        $('#talent-card-animated').addClass('animated flipInY delay-05s');
+        $('#csharp-card-animated').addClass('animated flipInY delay-1s');
+      }
+    },
+    offset: WAYPOINT_OFFSET
+  });
 
 /* Particles Configuration */
 
@@ -295,4 +293,6 @@ particlesJS("home", {
     }
   },
   "retina_detect": true
+});
+
 });
