@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "bootstrap": "^4.2.1",
     "css-loader": "^2.1.0",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
